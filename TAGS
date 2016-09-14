@@ -1,0 +1,61 @@
+
+c:/Users/jvdberg/hastuff/dragon/src\typechecking.hs,321
+module TypeChecking TypeChecking0,1
+type Ident Ident5,6
+type TVar TVar6,7
+data TypeType8,9
+  = Prim Prim9,10
+  | Var Var10,11
+  | Prod Prod11,12
+  | Arrow Arrow12,13
+instance instance15,16
+data ExprExpr22,23
+  = Ident Ident23,24
+  | FunDef FunDef24,25
+  | FunApp FunApp25,26
+type Env Env28,29
+
+c:/Users/jvdberg/hastuff/dragon/src\Main.hs,52
+module Main Main0,1
+main main2,3
+main main3,4
+
+c:/Users/jvdberg/hastuff/dragon/Setup.hs,15
+main main1,2
+
+c:/Users/jvdberg/hastuff/dragon/dist\build\autogen\Paths_dragon.hs,1104
+module Paths_dragon Paths_dragon4,5
+catchIO catchIO20,21
+catchIO catchIO22,23
+catchIO catchIO26,27
+catchIO catchIO28,29
+version version30,31
+version version31,32
+prefix, bindirrel bindirrel32,33
+prefix,prefix32,33
+prefix prefix33,34
+bindirrel bindirrel34,35
+getBinDir getBinDir36,37
+getBinDir getBinDir37,38
+getLibDir getLibDir39,40
+getLibDir getLibDir40,41
+getDataDir getDataDir42,43
+getDataDir getDataDir43,44
+getLibexecDir getLibexecDir45,46
+getLibexecDir getLibexecDir46,47
+getSysconfDir getSysconfDir48,49
+getSysconfDir getSysconfDir49,50
+getDataFileName getDataFileName51,52
+getDataFileName getDataFileName52,53
+getPrefixDirRel getPrefixDirRel56,57
+getPrefixDirRel getPrefixDirRel57,58
+minusFileName minusFileName72,73
+minusFileName minusFileName73,74
+joinFileName joinFileName78,79
+joinFileName joinFileName79,80
+splitFileName splitFileName86,87
+splitFileName splitFileName87,88
+pathSeparator pathSeparator100,101
+pathSeparator pathSeparator101,102
+isPathSeparator isPathSeparator103,104
+isPathSeparator isPathSeparator104,105
