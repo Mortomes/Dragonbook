@@ -1,25 +1,144 @@
 
-c:/Users/jvdberg/hastuff/dragon/src\typechecking.hs,346
+c:/Users/jvdberg/hastuff/dragon/src\typechecking.hs,1163
 module TypeChecking TypeChecking0,1
-type Ident Ident5,6
-type TVar TVar6,7
-data TypeType8,9
-  = Prim Prim9,10
-  | Var Var10,11
-  | Prod Prod11,12
-  | Constr Constr12,13
-  | Arrow Arrow13,14
-instance instance16,17
-data ExprExpr24,25
-  = Ident Ident25,26
-  | FunDef FunDef26,27
-  | FunApp FunApp27,28
-type Env Env30,31
+type Ident Ident6,7
+type TVar TVar7,8
+data TypeType9,10
+  = Prim Prim10,11
+  | Var Var11,12
+  | Prod Prod12,13
+  | Constr Constr13,14
+  | Arrow Arrow14,15
+varType varType17,18
+varType varType18,19
+data TypeNode TypeNode21,22
+data TypeNode = TypeNodeTypeNode21,22
+  { children children22,23
+  { children :: [TypeNode], set set22,23
+  { children :: [TypeNode], set :: Maybe TypeNode, type' type'22,23
+opNode opNode24,25
+opNode opNode25,26
+instance instance27,28
+type Env Env34,35
+findRepresentative findRepresentative36,37
+findRepresentative findRepresentative37,38
+setRepresentative setRepresentative41,42
+setRepresentative setRepresentative42,43
+union union44,45
+union union45,46
+unify unify52,53
+unify unify53,54
+mkTypeNode mkTypeNode67,68
+mkTypeNode mkTypeNode68,69
+t1 t174,75
+t1 t175,76
+n1 n176,77
+n1 n177,78
+t2 t279,80
+t2 t280,81
+n2 n281,82
+n2 n282,83
+t3 t384,85
+t3 t385,86
+n3 n386,87
+n3 n387,88
+ext1 ext189,90
+ext1 ext190,91
+exn1 exn196,97
+exn1 exn197,98
+ext2 ext299,100
+ext2 ext2100,101
+exn2 exn2106,107
+exn2 exn2107,108
+
+c:/Users/jvdberg/hastuff/dragon/src\targetmachine.hs,1553
+module TargetMachine TargetMachine0,1
+newtype Register Register4,5
+newtype Register = Register Register4,5
+newtype Register = Register { reg reg4,5
+instance instance6,7
+data LocationLocation8,9
+  = Var Var9,10
+  | Indexed Indexed10,11
+  | IndexedInt IndexedInt11,12
+  | Indirect Indirect12,13
+  | IndexedIndirect IndexedIndirect13,14
+  | Immediate Immediate14,15
+  | Reg Reg15,16
+newtype Label Label27,28
+newtype Label = Label Label27,28
+data InstrInstr31,32
+  = LD LD32,33
+  | ST ST33,34
+  | ADD ADD34,35
+  | SUB SUB35,36
+  | MUL MUL36,37
+  | DIV DIV37,38
+  | BR BR38,39
+  | BLTZ BLTZ39,40
+  | BGTZ BGTZ40,41
+  | BEQZ BEQZ41,42
+  | HALTHALT42,43
+class Cost Cost45,46
+class Cost Cost45,46
+  cost cost46,47
+data MachineWordMachineWord70,71
+  = Instr Instr71,72
+  | WordLit WordLit72,73
+wordVal wordVal75,76
+wordVal wordVal76,77
+newtype Memory Memory79,80
+newtype Memory = Memory Memory79,80
+newtype Memory = Memory {mem mem79,80
+data Computer Computer81,82
+data Computer = ComputerComputer81,82
+  { memory memory82,83
+  , env env83,84
+  , sp sp84,85
+  , pc pc85,86
+  , registers registers86,87
+getMem getMem89,90
+getMem (Memory mem) x | x `mod`mod90,91
+replace replace93,94
+replace replace94,95
+setMem setMem98,99
+getLoc getLoc103,104
+getLoc getLoc104,105
+changeMemory changeMemory124,125
+changeMemory changeMemory125,126
+changeRegister changeRegister127,128
+changeRegister changeRegister128,129
+setLoc setLoc133,134
+setLoc setLoc134,135
 
 c:/Users/jvdberg/hastuff/dragon/src\Main.hs,52
 module Main Main0,1
 main main2,3
 main main3,4
+
+c:/Users/jvdberg/hastuff/dragon/src\codegeneration.hs,577
+module CodeGeneration CodeGeneration0,1
+data Register Register2,3
+data Register = Register Register2,3
+instance instance4,5
+data LocationLocation7,8
+  = Address Address8,9
+  | Reg Reg9,10
+  | Var Var10,11
+  | IndexAddrVar IndexAddrVar11,12
+  | IndexAddrConst IndexAddrConst12,13
+  | Indirect Indirect13,14
+  | IndexedIndirect IndexedIndirect14,15
+  | Immediate Immediate15,16
+data InstrInstr28,29
+  = LD LD29,30
+  | ST ST30,31
+  | ADD ADD31,32
+  | SUB SUB32,33
+  | BR BR33,34
+  | BLTZ BLTZ34,35
+  | BGTZ BGTZ35,36
+  | BEQZ BEQZ36,37
 
 c:/Users/jvdberg/hastuff/dragon/Setup.hs,15
 main main1,2
